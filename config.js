@@ -1,7 +1,7 @@
 // @ts-check
-import profileImage from './src/images/profilepic.png?url';
-import backgroundImage from './src/images/backgrounds/watercolor-blue-green.png?url';
-import productImage from './src/images/product1.png?url';
+import profileImage from "./src/images/profilepic.png?url";
+import backgroundImage from "./src/images/backgrounds/watercolor-blue-green.png?url";
+import productImage from "./src/images/product1.png?url";
 
 /** @type {import('./src/types').SiteConfig} */
 const config = {
@@ -20,42 +20,18 @@ const config = {
       url: "https://instagram.com/journey.unknown",
       icon: "camera-retro",
     },
-    {
-      platform: "threads",
-      url: "https://threads.net/@journey.unknown",
-      icon: "threads",
-    },
-    {
-      platform: "linkedin",
-      url: "https://linkedin.com/in/cory-trimm",
-      icon: "linkedin",
-    },
-    {
-      platform: "spotify",
-      url: "https://spotify.com",
-      icon: "spotify",
-    },
-    {
-      platform: "snapchat",
-      url: "https://snapchat.com",
-      icon: "snapchaat",
-    },
-    {
-      platform: "tiktok",
-      url: "https://tiktok.com",
-      icon: "tiktok",
-    },
+
     // Add more social links as needed
     // Search for icons here - https://fontawesome.com/search
   ],
   links: [
     {
-      title: "Use This Template",
-      url: "https://github.com/ctrimm/astro-link-in-bio-theme",
-      icon: "code",
+      title: "Sell your designs printed",
+      url: "https://stllink.pages.dev/?from=instagram",
+      icon: "cube",
     },
     {
-      title: "My Personal Web Site",
+      title: "XD",
       url: "https://corytrimm.com",
       icon: "globe",
     },
@@ -70,7 +46,7 @@ const config = {
     {
       title: "Digital Product",
       description: "Description of your digital product",
-      url: "https://inshortpod.com",
+      url: `https://s.click.aliexpress.com/e/_DnKXnTP`,
       price: 19.99,
       includePriceOnSite: true,
       image: productImage,
@@ -81,8 +57,8 @@ const config = {
 
 export const analytics = {
   posthog: {
-    enableTracking: false
-  }
+    enableTracking: false,
+  },
 };
 
 export default config;

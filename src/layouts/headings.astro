@@ -1,0 +1,19 @@
+---
+// TableOfContentsLayout.astro
+
+const { headings } = Astro.props;
+---
+
+<nav class="table-of-contents">
+  <ul>
+    {
+      headings.map((heading: any) => (
+        <li class={`depth-${heading.depth}`}>
+          <a href={"#" + heading.slug}>{heading.text}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<slot />

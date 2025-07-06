@@ -1,0 +1,33 @@
+---
+interface Frontmatter {
+  title: string;
+  description?: string;
+}
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+const posts = await Astro.glob("../products/*.md");
+---
+
+<nav class="table-of-contents">
+  {
+    posts.map((post) => {
+      const headings = post.getHeadings();
+      return (
+        <section>
+          <ul>
+            {headings.map((heading: Heading) => (
+              <li class={`depth-${heading.depth}`}>
+                <a href={"#" + heading.slug}>{heading.text}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })
+  }
+</nav>

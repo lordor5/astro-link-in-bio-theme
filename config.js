@@ -57,7 +57,7 @@ const config = {
 
 export const analytics = {
   posthog: {
-    enableTracking: false,
+    enableTracking: true,
   },
 };
 

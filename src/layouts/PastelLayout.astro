@@ -1,8 +1,7 @@
 ---
-import '../styles/global.css';
-import config from '../configs/pastel-config.js';
-import PostHog from '../components/PostHog.astro';
-import LayoutSwitcher from '../components/LayoutSwitcher.astro';
+import "../styles/global.css";
+import PostHog from "../components/PostHog.astro";
+import Indice from "../components/Indice.astro";
 
 export interface Props {
   title: string;
@@ -11,7 +10,7 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,19 +18,13 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <PostHog />
   </head>
   <body class="min-h-screen relative">
-    <div
-      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style={`background-color: ${config.background.color};`}
-    >
-      <div class="absolute inset-0 bg-slate-300 opacity-25"></div>
-    </div>
-    <div class="relative z-10 container mx-auto px-4 py-8">
-      <slot/>
-    </div>
-    <LayoutSwitcher />
+    <slot />
   </body>
 </html>

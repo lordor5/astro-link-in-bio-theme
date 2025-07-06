@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Indice from "../components/Indice.astro";
+
+interface Frontmatter {
+  title: string;
+  description?: string;
+}
+const posts = await Astro.glob<Frontmatter>("../products/*.md");
+---
+
+<Layout title="Product">
+  {posts.map((post) => <a>{post.frontmatter.title}</a>)}
+  <Indice />
+</Layout>
